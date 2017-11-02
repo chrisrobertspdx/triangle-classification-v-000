@@ -25,6 +25,6 @@ class Triangle
 end
 class TriangleError < StandardError
   def message
-    "Shape does nnot meet spatial requirements to be a triangle"
+    "Shape does not meet spatial requirements to be a triangle"
   end
 end
