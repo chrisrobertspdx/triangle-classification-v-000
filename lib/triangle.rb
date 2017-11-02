@@ -14,9 +14,9 @@ class Triangle
       rescue ShapeError => error
           puts error.message
       end
-    elsif [self.a,self.b,self.c].set.size == 1
+    elsif [self.a,self.b,self.c].to_set.size == 1
       :equilateral
-    elsif [self.a,self.b,self.c].set.size == 2
+    elsif [self.a,self.b,self.c].to_set.size == 2
       :isosceles
     else
       :scalene
