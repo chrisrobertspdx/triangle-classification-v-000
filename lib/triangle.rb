@@ -8,7 +8,7 @@ class Triangle
     @c = c
   end
   def kind
-    if self.a + self.b < self.c || self.a + self.c < self.b || self.b + self.c < self.a
+    if self.a + self.b < self.c || self.a + self.c < self.b || self.b + self.c < self.a || self.b + self.c + self.a == 0
       begin
         raise ShapeError
       rescue ShapeError => error
