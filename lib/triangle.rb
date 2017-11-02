@@ -8,7 +8,7 @@ class Triangle
     @c = c
   end
   def kind
-    if self.a + self.b < self.c || self.a + self.c < self.b || self.b + self.c < self.a || self.b + self.c + self.a <= 0
+    if self.a + self.b <= self.c || self.a + self.c <= self.b || self.b + self.c <= self.a || self.b + self.c + self.a <= 0
       raise TriangleError
     elsif [self.a,self.b,self.c].uniq.size == 1
       :equilateral
