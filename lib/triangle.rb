@@ -12,7 +12,7 @@ class Triangle
       begin
         raise TriangleError
       rescue TriangleError => error
-          puts error.message
+        puts error.message
       end
     elsif [self.a,self.b,self.c].uniq.size == 1
       :equilateral
