@@ -6,16 +6,15 @@ class Triangle
     @a = a
     @b = b
     @c = c
-    if self.a + self.b < self.c || self.a + self.c < self.b || self.b + self.c < self.a || self.b + self.c + self.a == 0
+  end
+  def kind
+    if self.a + self.b < self.c || self.a + self.c < self.b || self.b + self.c < self.a || self.b + self.c + self.a <= 0
       begin
         raise TriangleError
       rescue TriangleError => error
           puts error.message
       end
-    end
-  end
-  def kind
-    if [self.a,self.b,self.c].uniq.size == 1
+    elsif [self.a,self.b,self.c].uniq.size == 1
       :equilateral
     elsif [self.a,self.b,self.c].uniq.size == 2
       :isosceles
